@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/ubiquisync.svg)](http://badge.fury.io/js/ubiquisync)
+
 # Ubiquisync
 
 Sync methods for backbone and ampersand that work in node and the browser.
