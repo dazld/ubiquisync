@@ -15,6 +15,7 @@ function sync(method, model, options) {
         var req;
         var url = (options.url || _.result(model,'url'));
         var data = (options.data || (method === 'update' || method === 'create') ? model.toJSON() : {});
+        var ajaxConfig = (_.result(model, 'ajaxConfig') || {});
 
         function success(res) {
             options.res = {
@@ -50,6 +51,10 @@ function sync(method, model, options) {
             } else {
                 req.query(data);
             }
+
+            _.each(ajaxConfig.headers, function(val, key){
+                req.set(key, val);
+            });
 
             if (options.headers) {
                 _.each(options.headers, function(val, key){
