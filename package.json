@@ -1,6 +1,6 @@
 {
   "name": "ubiquisync",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Ampersand / Backbone sync methods based on superagent that work on client and node",
   "main": "index.js",
   "scripts": {
